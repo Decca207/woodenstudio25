@@ -1,0 +1,34 @@
+@use 'variable' as *;
+
+body {
+    color: $textColor1;
+    font-family: $caslon, $serif, $sans, serif;
+}
+
+h2 {
+    font-size: 56px;
+
+
+}
+
+h3 {
+    font-size: 24px;
+}
+
+p {
+    font-size: 16px;
+}
+
+li {
+    list-style: none;
+}
+
+.section {
+    padding: 200px 0;
+
+}
+
+.concept-container {
+    max-width: 1080px;
+    margin: 0 auto;
+}

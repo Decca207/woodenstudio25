@@ -1,0 +1,156 @@
+@use 'variable' as *;
+@use 'common' as *;
+@use 'modules' as *;
+@use 'header';
+@use 'footer';
+
+// ヒーローエリア
+.hero {
+    width: 100%;
+    height: 100dvh;
+    background: url("../img/photo01.jpg") center center no-repeat;
+    background-size: cover;
+}
+
+//conceptセクション
+.concept {
+    background-color: $baseColor2;
+
+    .section-head {
+        margin-bottom: 216px;
+    }
+
+    &-first {
+        display: flex;
+        column-gap: 16px;
+        margin-bottom: 104px;
+
+        .column-left {
+            width: 50%;
+        }
+
+        .column-right {
+            position: relative;
+            width: 50%;
+            height: 570px;
+
+            &__photo:nth-child(1) {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 441px;
+                aspect-ratio: 1/1;
+                object-fit: cover;
+            }
+
+            &__photo:nth-child(2) {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 258px;
+                aspect-ratio: 1/1;
+                object-fit: cover;
+            }
+        }
+
+    }
+
+    &-second {
+        display: flex;
+        align-items: center;
+        column-gap: 16px;
+
+        .column-left {
+            width: 50%;
+
+            &__photo {
+                width: 100%;
+            }
+        }
+
+        .column-right {
+            width: 50%;
+            padding-left: 91px;
+        }
+    }
+
+    &-content {
+        &__head {
+            margin-bottom: 24px;
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        &__text {
+            line-height: 1.75;
+
+        }
+    }
+}
+
+//WORKSセクション
+.works {
+    &.section {
+        padding-bottom: 0;
+    }
+
+    .section-head {
+        text-align: center;
+    }
+
+    &-items {
+        display: flex;
+    }
+
+    &-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 25%;
+
+        aspect-ratio: 1/1;
+        object-fit: cover;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $overlay1;
+            transition: background-color .5s linear;
+        }
+
+        &:hover:before {
+            background-color: initial;
+        }
+
+        &__title {
+            z-index: 0;
+            color: $textColor2;
+            font-size: 24px;
+        }
+    }
+
+    &-img1 {
+        background: url("../img/photo05.jpg") center center no-repeat;
+        background-size: cover;
+    }
+
+    &-img2 {
+        background: url("../img/photo07.jpg") center center no-repeat;
+        background-size: cover;
+    }
+
+    &-img3 {
+        background: url("../img/photo06.jpg") center center no-repeat;
+        background-size: cover;
+    }
+
+    &-img4 {
+        background: url("../img/photo08.jpg") center center no-repeat;
+        background-size: cover;
+    }
+}
